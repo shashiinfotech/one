@@ -13,20 +13,21 @@
 
     <style>
         :root {
-            --bg: #090a0f;
-            --surface: #12141c;
-            --surface-elevated: #1a1e2b;
-            --border: rgba(255, 255, 255, 0.08);
-            --border-focus: rgba(99, 102, 241, 0.5);
+            /* Maroon Design System */
+            --bg: #120307;
+            --surface: #1e080f;
+            --surface-elevated: #2c0e17;
+            --border: rgba(244, 63, 94, 0.14);
+            --border-focus: rgba(225, 29, 72, 0.6);
             --primary: #ffffff;
-            --muted: #8e95a5;
-            --muted-dark: #585f70;
-            --accent: #6366f1;
-            --accent-light: #818cf8;
-            --accent-glow: rgba(99, 102, 241, 0.25);
-            --secondary: #ec4899;
+            --muted: #c99ea8;
+            --muted-dark: #7a505b;
+            --accent: #b91c1c;
+            --accent-light: #fb7185;
+            --accent-glow: rgba(185, 28, 28, 0.4);
+            --secondary: #f43f5e;
             --success: #10b981;
-            --warning: #f59e0b;
+            --warning: #fbbf24;
             --radius-sm: 8px;
             --radius-md: 14px;
             --radius-lg: 24px;
@@ -75,14 +76,14 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--accent), #4f46e5);
+            background: linear-gradient(135deg, #e11d48, var(--accent));
             color: #fff;
             box-shadow: 0 4px 20px var(--accent-glow);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+            box-shadow: 0 8px 25px rgba(225, 29, 72, 0.5);
         }
 
         .btn-secondary {
@@ -100,7 +101,7 @@
 
         /* ===== TOP BANNER ===== */
         .announcement-bar {
-            background: linear-gradient(90deg, #312e81, #4c1d95, #312e81);
+            background: linear-gradient(90deg, #4c0519, #881337, #4c0519);
             background-size: 200% auto;
             animation: gradientShift 8s ease infinite;
             padding: 8px 16px;
@@ -108,6 +109,7 @@
             font-size: 12px;
             font-weight: 600;
             letter-spacing: 0.5px;
+            border-bottom: 1px solid rgba(244, 63, 94, 0.2);
         }
 
         @keyframes gradientShift {
@@ -121,7 +123,7 @@
             position: sticky;
             top: 0;
             z-index: 60;
-            background: rgba(9, 10, 15, 0.8);
+            background: rgba(18, 3, 7, 0.85);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
         }
@@ -147,7 +149,7 @@
         .brand-logo {
             width: 38px;
             height: 38px;
-            background: linear-gradient(135deg, var(--accent), var(--secondary));
+            background: linear-gradient(135deg, #e11d48, #881337);
             border-radius: 10px;
             display: grid;
             place-items: center;
@@ -177,7 +179,7 @@
         }
 
         .search-box:focus-within {
-            border-color: var(--accent);
+            border-color: var(--secondary);
             box-shadow: 0 0 0 3px var(--accent-glow);
         }
 
@@ -220,7 +222,7 @@
 
         .action-btn:hover {
             color: #fff;
-            border-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(251, 113, 133, 0.4);
             transform: translateY(-2px);
         }
 
@@ -231,7 +233,7 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            background: var(--accent);
+            background: var(--secondary);
             color: #fff;
             font-size: 11px;
             font-weight: 700;
@@ -248,8 +250,8 @@
 
         .hero-banner {
             border-radius: var(--radius-lg);
-            background: radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.15), transparent 50%),
-                        linear-gradient(135deg, #10121a 0%, #0d0f17 100%);
+            background: radial-gradient(circle at 80% 20%, rgba(225, 29, 72, 0.22), transparent 50%),
+                        linear-gradient(135deg, #240a12 0%, #150409 100%);
             border: 1px solid var(--border);
             padding: 68px 56px;
             display: grid;
@@ -264,8 +266,8 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(99, 102, 241, 0.12);
-            border: 1px solid rgba(99, 102, 241, 0.3);
+            background: rgba(225, 29, 72, 0.15);
+            border: 1px solid rgba(251, 113, 133, 0.35);
             color: var(--accent-light);
             padding: 6px 14px;
             border-radius: 999px;
@@ -307,7 +309,7 @@
 
         .hero-img-box img {
             border-radius: var(--radius-md);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.7);
             border: 1px solid var(--border);
             max-height: 380px;
             object-fit: cover;
@@ -346,7 +348,7 @@
 
         .tab-btn.active, .tab-btn:hover {
             background: var(--surface-elevated);
-            border-color: var(--accent);
+            border-color: var(--secondary);
             color: #fff;
         }
 
@@ -380,13 +382,13 @@
 
         .product-card:hover {
             transform: translateY(-6px);
-            border-color: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(251, 113, 133, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
         }
 
         .product-thumb {
             position: relative;
-            background: #0f1118;
+            background: #19050b;
             aspect-ratio: 1 / 1;
             overflow: hidden;
         }
@@ -414,8 +416,8 @@
             text-transform: uppercase;
         }
 
-        .badge-new { background: var(--accent); color: #fff; }
-        .badge-sale { background: var(--secondary); color: #fff; }
+        .badge-new { background: var(--secondary); color: #fff; }
+        .badge-sale { background: #881337; border: 1px solid var(--accent-light); color: #fff; }
 
         .card-actions {
             position: absolute;
@@ -430,7 +432,7 @@
             width: 34px;
             height: 34px;
             border-radius: 50%;
-            background: rgba(18, 20, 28, 0.85);
+            background: rgba(30, 8, 15, 0.85);
             backdrop-filter: blur(8px);
             border: 1px solid var(--border);
             color: var(--muted);
@@ -524,8 +526,8 @@
         }
 
         .btn-add-cart:hover {
-            background: var(--accent);
-            border-color: var(--accent);
+            background: var(--secondary);
+            border-color: var(--secondary);
             box-shadow: 0 0 12px var(--accent-glow);
         }
 
@@ -533,7 +535,7 @@
         .drawer-overlay {
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(6px);
             z-index: 100;
             opacity: 0;
@@ -585,7 +587,7 @@
 
         .meter-bar {
             height: 6px;
-            background: var(--border);
+            background: rgba(255, 255, 255, 0.08);
             border-radius: 999px;
             margin-top: 8px;
             overflow: hidden;
@@ -593,7 +595,7 @@
 
         .meter-fill {
             height: 100%;
-            background: var(--accent);
+            background: linear-gradient(90deg, #e11d48, var(--accent-light));
             width: 0%;
             transition: width 0.4s ease;
         }
@@ -666,7 +668,7 @@
         .modal-overlay {
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.75);
+            background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(8px);
             z-index: 110;
             opacity: 0;
@@ -688,7 +690,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             overflow: hidden;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
             transform: scale(0.95);
             transition: var(--transition);
             position: relative;
@@ -712,7 +714,7 @@
         }
 
         .modal-gallery {
-            background: #0b0d13;
+            background: #150308;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -738,7 +740,7 @@
             bottom: 28px;
             right: 28px;
             background: var(--surface-elevated);
-            border: 1px solid var(--accent);
+            border: 1px solid var(--secondary);
             color: #fff;
             padding: 14px 22px;
             border-radius: 999px;
@@ -747,7 +749,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
             transform: translateY(120px);
             opacity: 0;
             transition: var(--transition);
